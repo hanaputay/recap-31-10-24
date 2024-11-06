@@ -4,35 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator BMI</title>
-    <link rel="stylesheet" href="style.css"> <!-- Menghubungkan ke style.css -->
+    <link rel="stylesheet" href="css/style.css"> <!-- Link ke file style.css di folder css -->
 </head>
 <body>
+
+<div class="container">
     <div class="bmi-calculator">
         <h1>Kalkulator BMI</h1>
+        <form id="bmiForm">
+            <div class="gender">
+                <label>Jenis Kelamin</label>
+                <input type="radio" name="gender" value="pria" id="pria" required> <label for="pria">Pria</label>
+                <input type="radio" name="gender" value="wanita" id="wanita" required> <label for="wanita">Wanita</label>
+            </div>
+            <label for="weight">Berat Badan (kg)</label>
+            <input type="number" id="weight" placeholder="Masukkan berat badan" required>
 
-        <div class="gender">
-            <label>Jenis Kelamin:</label><br>
-            <input type="radio" id="male" name="gender" value="Pria" checked>
-            <label for="male">Pria</label>
-            <input type="radio" id="female" name="gender" value="Wanita">
-            <label for="female">Wanita</label>
-        </div>
+            <label for="age">Usia (tahun)</label>
+            <input type="number" id="age" placeholder="Masukkan usia" required>
 
-        <label for="weight">Berat Badan (kg):</label>
-        <input type="number" id="weight" placeholder="Masukkan berat badan" required>
+            <label for="height">Tinggi Badan (cm)</label>
+            <input type="number" id="height" placeholder="Masukkan tinggi badan" required>
 
-        <label for="age">Usia (tahun):</label>
-        <input type="number" id="age" placeholder="Masukkan usia" required>
+            <button type="button" class="btn" onclick="calculateBMI()">Hitung BMI</button>
+            <button type="reset" class="btn reset">Reset</button>
+        </form>
 
-        <label for="height">Tinggi Badan (cm):</label>
-        <input type="number" id="height" placeholder="Masukkan tinggi badan" required>
-
-        <button class="btn" onclick="calculateBMI()">Hitung BMI</button>
-        <button class="btn reset" onclick="resetFields()">Reset</button>
-
-        <div class="result" id="result"></div>
+        <div id="result" class="result"></div>
     </div>
+</div>
 
-    <script src="script.js"></script> <!-- Menghubungkan ke script.js -->
+<script src="js/script.js"></script> <!-- Link ke file script.js di folder js -->
 </body>
 </html>
