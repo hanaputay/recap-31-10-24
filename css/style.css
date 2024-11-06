@@ -8,56 +8,84 @@ body {
     background-color: #f4f4f9;
 }
 
+.container {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 .bmi-calculator {
-    width: 300px;
-    padding: 20px;
+    padding: 30px;
     border-radius: 8px;
     background-color: #fff;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
 }
 
 h1 {
     color: rebeccapurple;
+    text-align: center;
     margin: 0 0 20px;
+}
+
+.gender {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Jarak antar elemen radio */
+}
+
+.gender label {
+    font-weight: normal;
+    margin: 0;
 }
 
 label {
     display: block;
-    margin-top: 10px;
-    text-align: left;
+    margin-top: 15px;
     font-weight: bold;
+    color: #333;
 }
 
 input[type="number"] {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     margin-top: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 4px;
     box-sizing: border-box;
+    font-size: 16px;
+}
+
+input[type="radio"] {
+    margin-right: 8px;
 }
 
 .btn {
-    padding: 10px;
+    padding: 12px;
     width: 100%;
     border: none;
-    background-color: rebeccapurple;
+    background-color: #4CAF50;
     color: #fff;
     font-weight: bold;
     cursor: pointer;
     border-radius: 4px;
     margin-top: 10px;
     transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+.reset {
+    background-color: #ccc;
+    color: #333;
 }
 
 .btn:hover {
-    background-color: indigo;
+    background-color: #45a049;
 }
 
 .result {
     margin-top: 20px;
     font-size: 1.2em;
     color: #333;
+    text-align: center;
 }
